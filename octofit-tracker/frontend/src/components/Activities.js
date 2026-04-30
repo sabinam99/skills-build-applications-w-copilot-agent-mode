@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const Activities = () => {
   const [activities, setActivities] = useState([]);
-  const endpoint = `${process.env.REACT_APP_CODESPACE_URL}/api/activities/`;
+  const endpoint = `${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`;
 
-  // Fetch activities from the API when the component mounts
   useEffect(() => {
     console.log('Fetching activities from:', endpoint);
     fetch(endpoint)
