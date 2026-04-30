@@ -4,6 +4,7 @@ const Activities = () => {
   const [activities, setActivities] = useState([]);
   const endpoint = `${process.env.REACT_APP_CODESPACE_URL}/api/activities/`;
 
+  // Fetch activities from the API when the component mounts
   useEffect(() => {
     console.log('Fetching activities from:', endpoint);
     fetch(endpoint)
